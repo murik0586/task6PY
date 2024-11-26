@@ -59,12 +59,12 @@ spending = 0
 
 def tax_earnings_minus_spending(earnings: int, spendings: int) -> int:
     tax = (earnings - spendings) * 15 / 100
-    if tax >= 0: return int(tax)  # TODO - это специально выбрано, чтобы не было float. Так задумано
+    if tax >= 0: return int(tax)  # Это специально выбрано, чтобы не было float. Так задумано
     return 0
 
 
 def tax_usn(earnings: int) -> int:
-    return int(earnings * 6 / 100)  # TODO доделать
+    return int(earnings * 6 / 100)
 
 
 while True:
