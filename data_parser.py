@@ -2,11 +2,7 @@ import csv
 
 
 def load_csv(file_path):
-    """
-    Загружает данные из CSV-файла и возвращает список словарей.
-    :param file_path: путь к CSV-файлу
-    :return: список данных в виде словарей
-    """
+
     data = []
     try:
         with open(file_path, mode='r', encoding='utf-8-sig') as file:  # utf-8-sig убирает BOM
@@ -24,11 +20,7 @@ def load_csv(file_path):
 
 
 def transform_data(client):
-    """
-    Преобразует данные клиента в нужный формат.
-    :param client: словарь с атрибутами клиента
-    :return: строка с описанием клиента
-    """
+
     fio = client['name']  # Было 'ФИО', теперь 'name'
     gender = "женского" if client['sex'].lower() == "female" else "мужского"
     age = client['age']
@@ -43,11 +35,7 @@ def transform_data(client):
 
 
 def write_to_txt(output_file, descriptions):
-    """
-    Записывает все описания в единый TXT-файл.
-    :param output_file: путь к выходному TXT-файлу
-    :param descriptions: список описаний клиентов
-    """
+
     try:
         with open(output_file, mode='w', encoding='utf-8') as file:
             for desc in descriptions:
@@ -58,9 +46,7 @@ def write_to_txt(output_file, descriptions):
 
 
 def main():
-    """
-    Главная функция для выполнения всех шагов.
-    """
+
     input_file = "web_clients_correct.csv"  # Файл с исходными данными
     output_file = "clients_descriptions.txt"  # Файл для записи описаний
 
