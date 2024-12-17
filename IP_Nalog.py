@@ -45,7 +45,10 @@
 end <Enter>
 
 """
-
+first, *_ ,second = ["Первый","Второй", "Третий", "Четвертый"]
+print(first)
+print(_)
+print(second)
 
 text_operation = '''Выберите операцию и введите её номер:
 1. Добавить новый доход
